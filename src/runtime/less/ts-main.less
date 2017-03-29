@@ -43,6 +43,52 @@ body > .ts-panel, {
 		overflow: visible;
 	}
 }
+.ts-has-toolbar-first-ts-micro {
+	.ts-maincontent {
+		border: @ts-unit solid transparent;
+	}
+}
+
+
+// Matrix ......................................................................
+
+.ts-matrix {
+	display: none;
+	div {
+		position: absolute;
+		background-color: @ts-lite;
+		z-index: @ts-zindex-main + 1;
+		&.ts-north,
+		&.ts-south {
+			height: @ts-unit;
+			left: 0;
+			right: 0;
+		}
+		&.ts-east,
+		&.ts-west {
+			width: @ts-unit;
+			top: 0;
+			bottom: 0;
+		}
+		&.ts-north {
+			top: 0;
+		}
+		&.ts-south {
+			bottom: 0;
+		}
+		&.ts-east {
+			right: 0;
+		}
+		&.ts-west {
+			left: 0;
+		}
+	}
+}
+.ts-has-toolbar-first-ts-micro {
+	.ts-matrix {
+		display: block;
+	}
+}
 
 
 // Adjustment time ............................................................
@@ -86,6 +132,13 @@ body > .ts-panel, {
 	&.ts-has-topbar {
 		.ts-main {
 			top: @ts-unit-triple;
+		}
+		.ts-matrix {
+			.ts-north,
+			.ts-west,
+			.ts-east {
+				top: @ts-unit-triple;
+			}
 		}
 		&.ts-has-toolbar-first-ts-macro {
 			.ts-main {

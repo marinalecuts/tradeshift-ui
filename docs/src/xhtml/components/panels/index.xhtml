@@ -15,7 +15,7 @@
 					<section>
 						<p>We can position <att>Panel</att> elements as direct children of the <elm>body</elm> to autogenerate tabs in the TopBar. The tabs at the top of this page are created with the markup shown below.</p>
 						<figure data-ts="DoxMarkup">
-							<script>
+							<script type="text/html">
 								<body>
 									<header data-ts="TopBar"></header>
 									<div data-ts="Panel" data-ts.label="Panel One">
@@ -42,7 +42,7 @@
 						<h3>History support</h3>
 						<p>To avoid conflicts with your favorite routing library, Tradeshift UI will not attempt to update the history (via the address bar). You can however add history support if you manually intercept tab selection like this.</p>
 						<figure data-ts="DoxScript">
-							<script>
+							<script type="text/javascript">
 								ts.ui.TopBar.tabs().onselect = function(newindex, oldindex) {
 									// update history here
 								};
@@ -68,7 +68,7 @@
 						<section>
 							<p>In this <att>Panel</att>, the nested <att>Main</att> contains two additional <att>Panel</att> elements to automatically generate the <a data-ts="Button" href="/#components/bars/tabbar.html">TabBar</a> seen above.</p>
 							<figure data-ts="DoxMarkup">
-								<script>
+								<script type="text/html">
 									<body>
 										<!-- Panel One -->
 										<div data-ts="Panel" data-ts.label="Panel Two">
@@ -119,7 +119,7 @@
 	  			<section>
 						<p>In this <att>Panel</att>, we have a nested <a data-ts="Button" href="/#components/sidebars/">SideBar</a> just to show that it must be positioned either before or after the <att>Main</att> element.</p>
 						<figure data-ts="DoxMarkup">
-							<script>
+							<script type="text/html">
 								<body>
 									<!-- Panel One -->
 									<!-- Panel Two -->

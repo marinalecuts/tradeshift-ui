@@ -512,6 +512,14 @@ ts.ui.ToolBarSpirit = (function using(chained, confirmed, Client, Type, guiArray
 			var micro = this.css.contains(ts.ui.CLASS_MICRO);
 			var klass = 'ts-has-toolbar-first-' + (micro ? 'ts-micro' : 'ts-macro');
 			this.guilayout.shiftGlobal(show, klass);
+
+			// hacking it
+			if (show) {
+				this.tick.next(function butwhy() {
+					var right = parseInt(this.css.compute('right'), 10);
+					this.css.right = (gui.Client.scrollBarSize + right);
+				});
+			}
 		},
 
 		/**

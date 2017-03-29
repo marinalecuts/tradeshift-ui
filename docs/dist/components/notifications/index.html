@@ -43,6 +43,22 @@
                 ));
             }, 500);
         }
+        ts.ui.ready(function() {
+            ts.ui.TopBar.tabs([{
+                    label: 'Tab 1'
+                },
+                {
+                    label: 'Tab 2'
+                }
+            ]);
+            ts.ui.TabBar.tabs([{
+                    label: 'Tab 1'
+                },
+                {
+                    label: 'Tab 2'
+                }
+            ]);
+        });
     </script>
 </head>
 

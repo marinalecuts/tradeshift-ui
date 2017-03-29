@@ -13,6 +13,7 @@
 
 	"spirits/ts.ui.Spirit.js",
 	"spirits/document/ts.ui.DocumentSpirit.js",
+	"spirits/main/ts.ui.MatrixSpirit.js",
 	"spirits/main/ts.ui.MainSpirit.js",
 	"spirits/maincontent/ts.ui.MainContentSpirit.js",
 	"spirits/icons/ts.ui.IconSpirit.js",

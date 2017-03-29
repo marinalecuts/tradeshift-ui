@@ -105,9 +105,6 @@ gui.SpritePlugin = (function() {
 			var pos = this._pos;
 			var set = [pos.x, pos.y, pos.z].map(Math.round);
 			var css = this.spirit.css;
-			// if (false && set.reduce(total) === 0) {
-			// 	this.reset(); // DISABLED FOR NOW!
-			// } else {
 			if (gui.Client.has3D) {
 				css.set('-beta-transform',
 					'translate3d(' + set.join('px,') + 'px)'
@@ -117,7 +114,6 @@ gui.SpritePlugin = (function() {
 				css.left = def.x + set[0];
 				css.top = def.y + set[1];
 			}
-			// }
 		}
 	});
 }());

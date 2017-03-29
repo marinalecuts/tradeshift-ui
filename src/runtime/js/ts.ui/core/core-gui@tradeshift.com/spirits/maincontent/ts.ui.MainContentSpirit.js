@@ -12,19 +12,27 @@ ts.ui.MainContentSpirit = ts.ui.Spirit.extend({
 	},
 
 	/**
-	 * Trap focus in the MAIN section so that TAB
-	 * won't travel into ASIDE or exit the IFRAME.
+	 * Fit.
 	 */
 	onready: function() {
 		this.super.onready();
-		/**
-		 * @todo fix the root cause why the class doesn't get added
-		 */
-		this.css.add('ts-maincontent');
-		if (gui.debug) {
-			if (this.dom.qdocall('.ts-maincontent').length > 1) {
-				console.log('There should be only on .ts-maincontent at any given time :/');
-			}
-		}
+		this._fit(this.dom.parent());
+	},
+
+	/**
+	 * Fit.
+	 */
+	onflex: function() {
+		this.super.onflex();
+		this._fit(this.dom.parent());
+	},
+
+	// Private ...................................................................
+
+	/**
+	 * @param {HTMLMainElement}
+	 */
+	_fit: function(main) {
+		this.css.height = main.scrollHeight;
 	}
 });

@@ -1,0 +1,7 @@
+<!DOCTYPE edbml>
+<script>
+	<div class="ts-north"></div>
+	<div class="ts-south"></div>
+	<div class="ts-east"></div>
+	<div class="ts-west"></div>
+</script>
